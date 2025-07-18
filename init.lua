@@ -230,6 +230,7 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  'github/copilot.vim', -- Detect tabstop and shiftwidth automatically
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
@@ -388,6 +389,18 @@ require('lazy').setup({
         --   },
         -- },
         -- pickers = {}
+        -- pickers = {
+        --   live_grep = {
+        --     file_ignore_patterns = { 'node_modules', '.git', '.venv' },
+        --     additional_args = function(_)
+        --       return { '--hidden' }
+        --     end,
+        --   },
+        --   find_files = {
+        --     file_ignore_patterns = { 'node_modules', '.git', '.venv' },
+        --     hidden = true,
+        --   },
+        -- },
         extensions = {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
